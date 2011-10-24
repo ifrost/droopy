@@ -3,7 +3,6 @@
 import re
 
 from droopy import op, attr
-from droopy.mock import _
 
 class Static(object):
     """Bundle with static text analysis"""
