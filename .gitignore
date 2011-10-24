@@ -1,0 +1,8 @@
+*.orig
+*.nja
+*.pyc
+*.*~
+*.swp
+droopy.egg-info
+dist
+build
