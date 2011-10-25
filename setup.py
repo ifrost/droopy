@@ -17,7 +17,7 @@ setup(
     keywords="text analysis readability",
     packages=['droopy', 'droopy.lang', 'tests'],
     test_suite='tests',
-    long_description=read('README.md'),
+    url="https://github.com/ifrost/droopy",
     classifiers=[
         "Development Status :: 4 - Beta",
         "Topic :: Utilities",
