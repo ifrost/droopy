@@ -50,7 +50,7 @@ class Readability(object):
         read more: http://en.wikipedia.org/wiki/Coleman%E2%80%93Liau_Index
 
         """
-        return (5.88 * (float(d.nof_characters)/d.nof_words) - 0.296 * (float(d.nof_sentences) / (float(d.nof_words)/100.0)) - 15.8)
+        return (5.88 * (float(d.nof_letters)/d.nof_words) - 0.296 * (float(d.nof_sentences) / (float(d.nof_words)/100.0)) - 15.8)
 
     @attr
     def automated_readability_index(self, d):
@@ -61,7 +61,7 @@ class Readability(object):
         read more: http://en.wikipedia.org/wiki/Automated_Readability_Index
 
         """
-        return (4.71*(float(d.nof_characters)/d.nof_words) + 0.5 * (float(d.nof_words)/d.nof_sentences) - 21.43)
+        return (4.71*(float(d.nof_letters)/d.nof_words) + 0.5 * (float(d.nof_words)/d.nof_sentences) - 21.43)
 
     @attr
     def smog(self, d):

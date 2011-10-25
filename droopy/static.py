@@ -9,16 +9,13 @@ class Static(object):
 
     PUNCTUATION = u".?!"
 
-    @op
-    def count_characters(self, d, with_white_characters):
-        if with_white_characters:
-            return len(d.text)
-        else:
-            return len(re.findall("[%s]" % (d.bigs + d.smalls), d.text))
-
     @attr
     def nof_characters(self, d):
-        return d.count_characters(False)
+        return len(d.text)
+
+    @attr
+    def nof_letters(self, d):
+        return len(re.findall("[%s]" % (d.bigs + d.smalls), d.text))
 
     @attr
     def words(self, d):

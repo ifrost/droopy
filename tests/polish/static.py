@@ -14,13 +14,14 @@ class PolishStatic(unittest.TestCase):
         self.ogonki = DroopyFactory.create_full_droopy(u"Gżegżółka to gatunek kukułki, który na terenie Polski objęty jest ścisłą ochroną gatunkową.", Polish())
 
     def test_characters(self):
-        self.assertEquals(15, self.simple.nof_characters)
-        self.assertEquals(17, self.simple.count_characters(True))
-        self.assertEquals(22, self.dots.nof_characters)
-        self.assertEquals(29, self.dots.count_characters(True))
-        self.assertEquals(77, self.ogonki.nof_characters)
-        self.assertEquals(91, self.ogonki.count_characters(True))
+        self.assertEquals(17, self.simple.nof_characters)
+        self.assertEquals(29, self.dots.nof_characters)
+        self.assertEquals(91, self.ogonki.nof_characters)
 
+    def test_letters(self):
+        self.assertEquals(15, self.simple.nof_letters)
+        self.assertEquals(22, self.dots.nof_letters)
+        self.assertEquals(77, self.ogonki.nof_letters)
 
     def test_syllables(self):
         self.assertEquals(5, self.simple.nof_syllables)
