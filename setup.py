@@ -9,7 +9,7 @@ def read(fname):
 
 setup(
     name="droopy",
-    version="0.0.4",
+    version="0.0.5",
     author="Piotr Jamroz",
     author_email="pm.jamroz@gmail.com",
     description="Little library for text analysis",

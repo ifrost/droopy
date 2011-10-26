@@ -19,7 +19,7 @@ class Static(object):
 
     @attr
     def words(self, d):
-        words_split = re.split(u"[ .,:;!?()\-+=\"\']", d.text)
+        words_split = re.split(u"[ .,:;!?()\-+=\"]", d.text)
         return [word.strip() for word in words_split if word.strip()]
 
     @attr
