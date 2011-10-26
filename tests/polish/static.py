@@ -12,6 +12,7 @@ class PolishStatic(unittest.TestCase):
         self.simple = DroopyFactory.create_full_droopy(u"Tylko prosty test", Polish())
         self.dots = DroopyFactory.create_full_droopy(u"To tylko test... wielokropka!", Polish())
         self.ogonki = DroopyFactory.create_full_droopy(u"Gżegżółka to gatunek kukułki, który na terenie Polski objęty jest ścisłą ochroną gatunkową.", Polish())
+        self.syllables = DroopyFactory.create_full_droopy(u"Niebieskooki dwudziestiopięciolatek", Polish())
 
     def test_characters(self):
         self.assertEquals(17, self.simple.nof_characters)
@@ -27,6 +28,7 @@ class PolishStatic(unittest.TestCase):
         self.assertEquals(5, self.simple.nof_syllables)
         self.assertEquals(5, self.simple.count_syllables_in_word("dalekowzroczny"))
         self.assertEquals(8, self.dots.nof_syllables)
+        self.assertEquals(12, self.syllables.nof_syllables)
 
     def test_words(self):
         self.assertEquals(3, self.simple.nof_words)

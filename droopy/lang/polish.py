@@ -30,11 +30,8 @@ class Polish(object):
     @op
     def count_syllables_in_word(self, d, word):
         vowels = len(re.findall(u"[%s]{1,2}" % d.vowels, word))
-        if vowels <= 1:
-            syllables = vowels
-        else:
-            soften_consonants = len(re.findall("[%s]i[%s]" % (d.consonants, d.vowels ), word))
-            syllables = vowels # - soften_consonants
+        double_o = len(re.findall(u"oo", word))
+        syllables = vowels + double_o
         return syllables
 
     @attr
