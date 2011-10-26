@@ -32,7 +32,7 @@ class English(object):
 
     @op
     def count_syllables_in_word(self, d, word):
-        return SYLLABLES.get(word.lower(), len(re.findall('[%s]' % d.vowels, word)))
+        return SYLLABLES.get(word.lower(), len(re.findall('[%s]{1,2}' % d.vowels, word)))
 
     @attr
     def foggy_word_syllables(self, d):

@@ -26,7 +26,7 @@ class EnglishStatic(unittest.TestCase):
 
     def test_syllables(self):
         self.assertEquals(5, self.simple.nof_syllables)
-        self.assertEquals(44, self.complex.nof_syllables)
+        self.assertEquals(45, self.complex.nof_syllables) # from www.syllablecount.com
 
     def test_words(self):
         self.assertEquals(4, self.simple.nof_words)
