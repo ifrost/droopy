@@ -2,6 +2,7 @@
 
 from droopy import Droopy
 
+from droopy.basic import Basic
 from droopy.static import Static
 from droopy.readability import Readability
 from droopy.filters import TextFilter
@@ -24,4 +25,4 @@ class DroopyFactory(object):
 
     @staticmethod
     def get_all_available_bundles():
-        return [Static(), Readability(), TextFilter()]
+        return [Basic(), Static(), Readability(), TextFilter()]

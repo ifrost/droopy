@@ -30,6 +30,10 @@ class English(object):
     def smalls(self, d):
         return u"aeiouybcdfghjklmnpqrstvwxz"
 
+    @attr
+    def letters(self, d):
+        return d.smalls + d.bigs
+
     @op
     def count_syllables_in_word(self, d, word):
         return SYLLABLES.get(word.lower(), len(re.findall('[%s]{1,2}' % d.vowels, word)))

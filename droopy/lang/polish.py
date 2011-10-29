@@ -27,6 +27,10 @@ class Polish(object):
     def smalls(self, d):
         return u"aąeęioóuybcćdfghjklłmnńpqrsśtvwxzźż"
 
+    @attr
+    def letters(self, d):
+        return d.smalls + d.bigs
+
     @op
     def count_syllables_in_word(self, d, word):
         vowels = len(re.findall(u"[%s]{1,2}" % d.vowels, word))
