@@ -21,12 +21,15 @@ Droopy Library provides some built-in bundles that you can use.
 
 ## Built-in bundles
 
+- Basic Bundle (basic.py)
 - Static Analysis Bundle (static.py)
 - Readability Bundle (readability.py)
 - Filters Bundle (filters.py)
 - Language Bundles Pack (lang module)
     - Polish Language Bundle (lang/polish.py)
     - English Language Bundle (lang/english.py)
+
+Basic Bundle with common processors like alphanumeric chars, digits (Language Bundle required)
 
 Language bundles provides basic information about vowels, consonants, syllables counters, etc.
 
@@ -71,7 +74,19 @@ You can create custom bundles. To do this create a class (it could be plain obje
             return droopy.nof_words * 2 # refer to Static Bundle processors
 
         @op
-        def my_operators(self, droopy, some_value):
-            return droopy.my_attribute * some_value
+        def my_operator(self, droopy, some_value):
+            return droopy.my_attribute * some_value            
+
+After this you can use your bundle:
+
+    from droopy import Droopy
+    from mybundles import MyBundle
+    from droopy.lang.english import English
+
+    text = Droopy("Just a simple test")
+    text.add_bundles(MyBundle(), English())
+
+    print text.my_attribute # custom attribute
+    print text.my_operator(2) # custom operator
 
 See also: examples\custom\_bundle.py
